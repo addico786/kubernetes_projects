@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: django-deployment
+  namespace: django 
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: django
+  template:
+    metadata:
+      labels:
+        app: django
+    spec:
+      containers:
+      - name: django
+        image: addico786/app:latest
+        ports:
+        - containerPort: 8000
