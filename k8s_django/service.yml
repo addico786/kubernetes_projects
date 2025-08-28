@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: django-Service
+  name: django-service
   namespace: django
 spec:
   selector:
