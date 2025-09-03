@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: mysql-Service
+  name: mysql-service
   namespace: mysql
 spec:
   selector:
@@ -10,4 +10,4 @@ spec:
   - protocol: TCP
     port: 3306
     targetPort: 3306
-  ClusterIP: None
+  clusterIP: None
